@@ -1,4 +1,8 @@
-import "./Navbar.css"
+import App from "../../App";
+import SearchBar from "../SearchBar/SearchBar";
+import '../SearchBar/SearchBar.css';
+import "./Navbar.css";
+import getSearchedVideoGame from "../../App";
 
 const Navbar = () => {
     return ( 
@@ -7,6 +11,7 @@ const Navbar = () => {
                 <li className="brand">
                     <div style={{ textDecoration: "none", color: "white" }}>
                         <b>Game Data</b>
+                        <SearchBar submittedSearchTerm={getSearchedVideoGame} />
                     </div>
                 </li>
             </ul>
