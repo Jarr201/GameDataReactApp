@@ -3,12 +3,7 @@ import axios from 'axios'
 // import DisplayAllVG from './Components/DisplayAllVG/DisplayAllVG';
 import SearchBar from './Components/SearchBar/SearchBar';
 import './App.css';
-<<<<<<< HEAD
-import React, { useState } from 'react';
 import Navbar from './Components/Navbar/Navbar';
-=======
-
->>>>>>> 8de451adda27beb7a31d2ff79f33f0402d00bd63
 
 function App() {
 

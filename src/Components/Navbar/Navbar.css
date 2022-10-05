@@ -9,7 +9,7 @@ li {
     color: purple;
 }
 
-.navbar {
+.navBar {
     background: purple;
     box-shadow: 4px 2px 5px gray;
     margin-bottom: 2rem;
@@ -19,7 +19,7 @@ li {
 .navBar button {
     background: transparent;
     border: 2px solid purple;
-    color: #17c2b1;
+    color: purple;
     padding: 0.4rem 0.5rem;
   }
 
@@ -28,3 +28,9 @@ li {
     color: purple;
     cursor: pointer;
   }
+
+  .brand {
+    cursor: pointer;
+    font-size: 2rem;
+  }
+  
