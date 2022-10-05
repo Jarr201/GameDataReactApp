@@ -3,12 +3,8 @@ import axios from 'axios'
 // import DisplayAllVG from './Components/DisplayAllVG/DisplayAllVG';
 import SearchBar from './Components/SearchBar/SearchBar';
 import './App.css';
-<<<<<<< HEAD
 import SearchResultsDisplay from './Components/SearchResultsDisplay/SearchResultsDisplay';
-
-=======
 import Navbar from './Components/Navbar/Navbar';
->>>>>>> 1327d6d59f3404db2dd72344e9950165921aa39d
 
 function App() {
 
