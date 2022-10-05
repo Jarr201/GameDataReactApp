@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios'
-import DisplayAll_VG from './Components/DisplayAll_VG/DisplayAll_VG';
+import DisplayAllVG from './Components/DisplayAllVG/DisplayAllVG';
 import './App.css';
 
 
@@ -23,7 +23,7 @@ function App() {
   return (
     <div>
       <h3>Hello World</h3>
-      <DisplayAll_VG videogames={videogames}/>
+      <DisplayAllVG videogames={videogames}/>
     </div>
   );
 }
