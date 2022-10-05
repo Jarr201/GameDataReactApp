@@ -5,6 +5,7 @@ import SearchBar from './Components/SearchBar/SearchBar';
 import './App.css';
 import SearchResultsDisplay from './Components/SearchResultsDisplay/SearchResultsDisplay';
 import Navbar from './Components/Navbar/Navbar';
+import Footer from './Components/Footer/Footer';
 
 function App() {
 
@@ -42,10 +43,10 @@ function App() {
   return (
     <div>
       <Navbar />
-      <h3>Hello World</h3>
       {/* <DisplayAllVG videogames={videogames}/> */}
-      <SearchBar submittedSearchTerm={getSearchedVideoGame} />
+      {/* <SearchBar submittedSearchTerm={getSearchedVideoGame} /> */}
       <SearchResultsDisplay videogames={videogames}/>
+      <Footer />
     </div>
   );
 }
