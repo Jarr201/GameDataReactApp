@@ -26,20 +26,20 @@ const TopFiveChart = ({videogames}) => {
             return game.name
         });
         console.log("Names of games ordered by rank", orderedGamesNames)
-        // //Filter by Region: Japan
-        // let japanGames = videogames.filter(game => game.japansales);
-        // console.log("Japan", japanGames)
+        //Filter by Region: Japan
+        let japanGames = orderedGames.filter(game => game.japansales);
+        console.log("Japan", japanGames)
 
-        // //Filter by Region: Europe
-        // let europeGames = videogames.filter(games => games.europesales);
-        // console.log("Europe", europeGames)
+        //Filter by Region: Europe
+        let europeGames = orderedGames.filter(games => games.europesales);
+        console.log("Europe", europeGames)
 
-        // //Fliter by Region: North America
-        // let northAmerGames = videogames.filter(games => games.northamericasales);
-        // console.log("North America", northAmerGames)
+        //Fliter by Region: North America
+        let northAmerGames = orderedGames.filter(games => games.northamericasales);
+        console.log("North America", northAmerGames)
 
         let rankedGameArrays = orderedGamesNames.map(gamesNames => {
-            return [gamesNames, 500, 400, 200]
+            return [gamesNames, 100, 260, 87]
         });
         console.log("Arrays to be charted", rankedGameArrays)
 

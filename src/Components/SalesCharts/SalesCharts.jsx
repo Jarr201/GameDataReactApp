@@ -16,15 +16,15 @@ const SalesCharts = ({videogames}) => {
     let distinctPlatform = [...new Set(platforms)]
     console.log('Distinct Platforms', distinctPlatform)
     
-    // let totalSales = filteredGames.map(game => game.northamericasales + game.europesales)
-    // console.log("Total Sales", totalSales)
+    let totalSales = filteredGames.map(game => game.globalsales)
+    console.log("Total Sales", totalSales)
 
     let platformArrays = distinctPlatform.map(platform => {
       
       let allGamesForPlatform = filteredGames.filter(game => game.platform == platform);
       let allSalesForTotalSales = filteredGames.filter(game => game.totalSales == totalSales)
       
-      return [platform, 20, "silver"]
+      return [platform, totalSales, "silver"]
     })
     console.log("Platform Arrays", platformArrays)
 
