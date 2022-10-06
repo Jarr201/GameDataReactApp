@@ -16,12 +16,15 @@ const SalesCharts = ({videogames}) => {
     let distinctPlatform = [...new Set(platforms)]
     console.log('Distinct Platforms', distinctPlatform)
     
+    let totalSales = filteredGames.map(game => game.northamericasales + game.europesales)
+    console.log("Total Sales", totalSales)
+
     let platformArrays = distinctPlatform.map(platform => {
       
       let allGamesForPlatform = filteredGames.filter(game => game.platform == platform);
       
       
-      return [platform, 10, "silver"]
+      return [platform, totalSales, "silver"]
     })
     console.log("Platform Arrays", platformArrays)
 
@@ -39,15 +42,23 @@ const SalesCharts = ({videogames}) => {
       return data;
   }
 
+  const options = {
+    title: "Sales Chart",
+    width: 600,
+    height: 400,
+    bar: { groupWidth: "95%" },
+    legend: { position: "none" },
+  };
+
   return ( 
         <div>
-          <h1>Sales Title Example</h1>
+          {/* <h1>Sales Title Example</h1> */}
             <Chart
               chartType="BarChart"
               width="100%"
               height="400px"
               data={generateDataFormChart()}
-              // options={options}
+              options={options}
             />
         </div>
      );

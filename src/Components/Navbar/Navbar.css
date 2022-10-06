@@ -6,26 +6,26 @@ ul {
 
 li {
     font-size: 1.25rem;
-    color: purple;
+    /* color: purple; */
 }
 
-.navBar {
+/* .navBar {
     background: purple;
     box-shadow: 4px 2px 5px gray;
     margin-bottom: 2rem;
     padding: 1.5rem 2rem;
-}
+} */
 
 .navBar button {
     background: transparent;
-    border: 2px solid purple;
-    color: purple;
+    /* border: 2px solid purple;
+    color: purple; */
     padding: 0.4rem 0.5rem;
   }
 
   .navBar button:hover {
     background: white;
-    color: purple;
+    /* color: purple; */
     cursor: pointer;
   }
 
