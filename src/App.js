@@ -17,9 +17,12 @@ function App() {
   }, [])
 
   async function getAllVideoGames(){
+    try{
     let response = await axios.get('http://localhost:8080/all');
     setVideogames(response.data);
-    console.log(response.data);
+    } catch(ex){
+    console.log(`ERROR in getAllVideoGames EXCEPTION: ${ex}`);
+    }
   }
 
   // async function getById(){
