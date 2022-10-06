@@ -5,6 +5,7 @@ import SearchResultsDisplay from './Components/SearchResultsDisplay/SearchResult
 import Navbar from './Components/Navbar/Navbar';
 import Footer from './Components/Footer/Footer';
 import SalesCharts from './Components/SalesCharts/SalesCharts';
+import TopFiveChart from './Components/TopFiveChart/TopFiveChart';
 
 function App() {
 
@@ -14,7 +15,7 @@ function App() {
 
   useEffect(() => {
     getAllVideoGames();
-    getById();
+    // getById();
   }, [])
 
   async function getAllVideoGames(){
@@ -26,17 +27,18 @@ function App() {
     }
   }
 
-  async function getById(){
-    let response = await axios.get('http://localhost:8080/getById/125');
-    setVideogameId(response.data);
-    console.log(response.data);
-  }
+  // async function getById(){
+  //   let response = await axios.get('http://localhost:8080/getById/125');
+  //   setVideogameId(response.data);
+  //   console.log(response.data);
+  // }
 
   return (
     <div>
       <Navbar videogames={videogames} setFilteredVideogames={setFilteredVideogames}/>
-      <SearchResultsDisplay filteredVideogames={filteredVideogames} />
       <SalesCharts videogames={videogames}/>
+      <TopFiveChart videogames={videogames}/>
+      <SearchResultsDisplay filteredVideogames={filteredVideogames} />
       <Footer />
     </div>
   );

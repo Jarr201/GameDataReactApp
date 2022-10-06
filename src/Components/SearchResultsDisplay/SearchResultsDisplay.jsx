@@ -4,6 +4,7 @@ const SearchResultsDisplay = (props) => {
     // console.log(props.videogames)
 
     return (
+        
         <div class="table-responsive">
             <table className='table table-hover' border='2px' style={{'borderCollapse':'collapse'}}>
                 <thead>
