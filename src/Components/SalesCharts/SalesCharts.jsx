@@ -20,6 +20,7 @@ const SalesCharts = ({videogames}) => {
       
       let allGamesForPlatform = filteredGames.filter(game => game.platform == platform);
       
+      
       return [platform, 10, "silver"]
     })
     console.log("Platform Arrays", platformArrays)
