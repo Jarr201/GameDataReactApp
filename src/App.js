@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios'
-// import DisplayAllVG from './Components/DisplayAllVG/DisplayAllVG';
-import SearchBar from './Components/SearchBar/SearchBar';
 import './App.css';
 import SearchResultsDisplay from './Components/SearchResultsDisplay/SearchResultsDisplay';
 import Navbar from './Components/Navbar/Navbar';
@@ -11,11 +9,12 @@ import SalesCharts from './Components/SalesCharts/SalesCharts';
 function App() {
 
   const [videogames, setVideogames] = useState([]);
+  const [videogameID, setVideogameId] = useState([]);
   const [filteredVideogames, setFilteredVideogames] = useState([]);
 
   useEffect(() => {
     getAllVideoGames();
-    // getById();
+    getById();
   }, [])
 
   async function getAllVideoGames(){
@@ -27,29 +26,15 @@ function App() {
     }
   }
 
-  // async function getById(){
-  //   let response = await axios.get('http://localhost:8080/getById/125');
-  //   setVideogames(response.data);
-  //   console.log(response.data);
-  // }
-
-  // function getSearchedVideoGame(searchterm){
-  //   let response = videogames.filter(function(e){
-  //     if (e.name.includes(searchterm))
-  //     {return true}
-  //     else
-  //     {return false}
-  //   });
-  //   setVideogames(response)
-  //   console.log(response)
-  // }
-  
+  async function getById(){
+    let response = await axios.get('http://localhost:8080/getById/125');
+    setVideogameId(response.data);
+    console.log(response.data);
+  }
 
   return (
     <div>
       <Navbar videogames={videogames} setFilteredVideogames={setFilteredVideogames}/>
-      {/* <DisplayAllVG videogames={videogames}/> */}
-      {/* <SearchBar submittedSearchTerm={getSearchedVideoGame} /> */}
       <SearchResultsDisplay filteredVideogames={filteredVideogames} />
       <SalesCharts videogames={videogames}/>
       <Footer />
