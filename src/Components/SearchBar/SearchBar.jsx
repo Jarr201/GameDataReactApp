@@ -14,10 +14,15 @@ const SearchBar = (props) => {
     };
 
     return (
-        <form className='searchbar' onSubmit={handleSubmit}>
-            <input type='text' value={search_term} placeholder="...title" onChange={(event) => setSearchTerm(event.target.value)}/>
-            <input type='submit' value="Search"/>
-        </form>
+        // <form className='searchbar' onSubmit={handleSubmit}>
+        //     <input type='text' value={search_term} placeholder="...title" onChange={(event) => setSearchTerm(event.target.value)}/>
+        //     <input type='submit' value="Search"/>
+        // </form>
+        <form className='searchbar' onSubmit={handleSubmit} class="d-flex">
+        <input class="form-control me-sm-2" value={search_term} type="text" placeholder="title" onChange={(event) => setSearchTerm(event.target.value)}/>
+        <input type='submit' value="Search"/>
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+      </form>
     );
 }
  
