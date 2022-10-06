@@ -19,16 +19,20 @@ const Navbar = (props) => {
       }
       
     return ( 
-        <div className="navBar">
-            <ul>
-                <li className="brand">
-                    <div style={{ textDecoration: "none", color: "white" }}>
-                        <b>Game Data</b>
-                        <SearchBar submittedSearchTerm={getSearchedVideoGame} />
-                    </div>
-                </li>
-            </ul>
-        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">    
+            <div class="container-fluid">
+                <div className="navBar">
+                    <ul>
+                        <li className="brand">
+                            <div style={{ textDecoration: "none", color: "white" }}>
+                                <b>Game Data</b>
+                                <SearchBar submittedSearchTerm={getSearchedVideoGame} />
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
      );
 }
  
