@@ -1,7 +1,7 @@
 
 const SearchResultsDisplay = (props) => {
-
-    console.log(props.videogames)
+    
+    // console.log(props.videogames)
 
     return (
         <div class="table-responsive">
@@ -18,7 +18,7 @@ const SearchResultsDisplay = (props) => {
                 </thead>
 
                 <tbody>
-                {props.videogames.map((videogames, index) => {
+                {props.filteredVideogames.length > 0 && props.filteredVideogames.map((videogames, index) => {
                     return (
                         <tr key={index}>
                             <td>{videogames.name}</td>

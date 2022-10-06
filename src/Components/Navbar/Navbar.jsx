@@ -14,7 +14,7 @@ const Navbar = (props) => {
           else
           {return false}
         });
-        props.setVideogames(response)
+        props.setFilteredVideogames(response)
         console.log(response)
       }
       

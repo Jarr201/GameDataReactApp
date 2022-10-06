@@ -1,10 +1,10 @@
 
 
-const DisplayAllVG = (props) => {
+// const DisplayAllVG = (props) => {
 
-    console.log(props.videogames)
+//     console.log(props.videogames)
 
-    return({})
-}
+//     return({})
+// }
 
-export default DisplayAllVG;
+// export default DisplayAllVG;

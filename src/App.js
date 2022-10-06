@@ -11,6 +11,7 @@ import SalesCharts from './Components/SalesCharts/SalesCharts';
 function App() {
 
   const [videogames, setVideogames] = useState([]);
+  const [filteredVideogames, setFilteredVideogames] = useState([]);
 
   useEffect(() => {
     getAllVideoGames();
@@ -46,10 +47,10 @@ function App() {
 
   return (
     <div>
-      <Navbar videogames={videogames} setVideogames={setVideogames}/>
+      <Navbar videogames={videogames} setFilteredVideogames={setFilteredVideogames}/>
       {/* <DisplayAllVG videogames={videogames}/> */}
       {/* <SearchBar submittedSearchTerm={getSearchedVideoGame} /> */}
-      <SearchResultsDisplay videogames={videogames}/>
+      <SearchResultsDisplay filteredVideogames={filteredVideogames} />
       <SalesCharts videogames={videogames}/>
       <Footer />
     </div>
