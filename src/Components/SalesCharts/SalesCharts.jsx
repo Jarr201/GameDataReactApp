@@ -22,7 +22,7 @@ const SalesCharts = ({videogames}) => {
     let platformArrays = distinctPlatform.map(platform => {
       
       let allGamesForPlatform = filteredGames.filter(game => game.platform == platform);
-      
+      let allSalesForTotalSales = filteredGames.filter(game => game.totalSales == totalSales)
       
       return [platform, 20, "silver"]
     })
