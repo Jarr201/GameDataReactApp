@@ -6,6 +6,7 @@ import './App.css';
 import SearchResultsDisplay from './Components/SearchResultsDisplay/SearchResultsDisplay';
 import Navbar from './Components/Navbar/Navbar';
 import Footer from './Components/Footer/Footer';
+import SalesCharts from './Components/SalesCharts/SalesCharts';
 
 function App() {
 
@@ -46,6 +47,7 @@ function App() {
       {/* <DisplayAllVG videogames={videogames}/> */}
       {/* <SearchBar submittedSearchTerm={getSearchedVideoGame} /> */}
       <SearchResultsDisplay videogames={videogames}/>
+      <SalesCharts videogames={videogames}/>
       <Footer />
     </div>
   );
