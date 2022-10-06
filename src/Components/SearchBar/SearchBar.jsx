@@ -3,10 +3,10 @@ import './SearchBar.css';
 
 const SearchBar = (props) => {
 
-    console.log(props.videogames)
+    // console.log(props.videogames)
 
     const [search_term, setSearchTerm] = useState('');
-
+   
     function handleSubmit(event) {
         event.preventDefault();
         console.log(search_term)

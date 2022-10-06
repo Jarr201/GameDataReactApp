@@ -31,21 +31,21 @@ function App() {
   //   console.log(response.data);
   // }
 
-  function getSearchedVideoGame(searchterm){
-    let response = videogames.filter(function(e){
-      if (e.name.includes(searchterm))
-      {return true}
-      else
-      {return false}
-    });
-    setVideogames(response)
-    console.log(response)
-  }
+  // function getSearchedVideoGame(searchterm){
+  //   let response = videogames.filter(function(e){
+  //     if (e.name.includes(searchterm))
+  //     {return true}
+  //     else
+  //     {return false}
+  //   });
+  //   setVideogames(response)
+  //   console.log(response)
+  // }
   
 
   return (
     <div>
-      <Navbar />
+      <Navbar videogames={videogames} setVideogames={setVideogames}/>
       {/* <DisplayAllVG videogames={videogames}/> */}
       {/* <SearchBar submittedSearchTerm={getSearchedVideoGame} /> */}
       <SearchResultsDisplay videogames={videogames}/>

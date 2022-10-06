@@ -3,8 +3,21 @@ import SearchBar from "../SearchBar/SearchBar";
 import '../SearchBar/SearchBar.css';
 import "./Navbar.css";
 import getSearchedVideoGame from "../../App";
+import {useState} from "react";
 
-const Navbar = () => {
+
+const Navbar = (props) => {   
+    function getSearchedVideoGame(searchterm){
+        let response = props.videogames.filter(function(e){
+          if (e.name.includes(searchterm))
+          {return true}
+          else
+          {return false}
+        });
+        props.setVideogames(response)
+        console.log(response)
+      }
+      
     return ( 
         <div className="navBar">
             <ul>
