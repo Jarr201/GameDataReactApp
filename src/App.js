@@ -6,6 +6,7 @@ import Navbar from './Components/Navbar/Navbar';
 import Footer from './Components/Footer/Footer';
 import SalesCharts from './Components/SalesCharts/SalesCharts';
 import TopFiveChart from './Components/TopFiveChart/TopFiveChart';
+import PlatformChart from './Components/PlatformChart/PlatformChart'
 
 function App() {
 
@@ -40,12 +41,13 @@ function App() {
         <div className='container-fluid'>
           <div className='row'>
             <div className='col-md-6'>
-              <div className='border-box'>
+              <div>
                 <SearchResultsDisplay filteredVideogames={filteredVideogames} />
               </div>
             </div>
             <div className='col-md-6' style={{padding: '3em', }}>
-              <h1>Analytics</h1>
+              {/* <h1>Analytics</h1> */}
+              <PlatformChart videogames={videogames}/>
               <SalesCharts videogames={videogames}/>
               <TopFiveChart videogames={videogames}/>
             </div>
