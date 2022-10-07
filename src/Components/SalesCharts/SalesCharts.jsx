@@ -31,7 +31,22 @@ const SalesCharts = ({videogames}) => {
     console.log("Platform Arrays", platformArrays)
 
     const data = [
-        ["Platform", "Sales", {role: "style"}],
+      // [
+      //   "Platform",
+      //   "Sales",
+      //   { role: "style" },
+      //   {
+      //     sourceColumn: 0,
+      //     role: "annotation",
+      //     type: "string",
+      //     data: "stringify"
+      //   },
+      // ],  
+      // ...platformArrays
+      
+      
+      
+      ["Platform", "Sales", {role: "style"}],
         ...platformArrays
       ];
       console.log("Data", data)
@@ -45,7 +60,7 @@ const SalesCharts = ({videogames}) => {
   }
 
   const options = {
-    title: "Sales Chart",
+    title: "Since 2013",
     width: 600,
     height: 400,
     bar: { groupWidth: "95%" },
@@ -53,14 +68,16 @@ const SalesCharts = ({videogames}) => {
   };
 
   return ( 
-        <div>
-          {/* <h1>Sales Title Example</h1> */}
+        <div class="shadow p-3 mb-5 bg-white rounded">
+          <h1>Global Sales for Each Platform</h1>
             <Chart
+              background="transparent"
               chartType="BarChart"
               width="100%"
               height="400px"
               data={generateDataFormChart()}
               options={options}
+              legendToggle
             />
         </div>
      );
