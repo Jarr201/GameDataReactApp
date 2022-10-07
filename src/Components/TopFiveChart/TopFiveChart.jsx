@@ -67,21 +67,23 @@ const TopFiveChart = ({ videogames }) => {
     return data;
   }
 
-  return (
-    <div>
-      <h1> Global Top Five and Region with Highest Sales </h1>
-      <Chart
-        chartType="Bar"
-        width="100%"
-        height="600px"
-        data={generateDataFormChart()}
-        options={options}
-      />
-    </div>
-  );
-};
+    return (
+        <div class="shadow p-3 mb-5 bg-white rounded">
+            <h1> Global Top Five and Region with Highest Sales </h1>
+            <Chart
+                chartType="Bar"
+                width="100%"
+                height="400px"
+                data={generateDataFormChart()}
+                options={options}
+            />
+        </div>
+    );
+}
 
 export default TopFiveChart;
 
 
-let obj = {name: "Wii Sports", }
+// let obj = {name: "Wii Sports", }
+    // }
+

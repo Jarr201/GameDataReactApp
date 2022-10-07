@@ -1,11 +1,11 @@
-
+import "./SearchResultsDisplay.css"
 const SearchResultsDisplay = (props) => {
     
     // console.log(props.videogames)
 
     return (
         
-        <div class="table-responsive">
+        <div class="table-responsive" className="form-grid">
             <table className='table table-hover' border='2px' style={{'borderCollapse':'collapse'}}>
                 <thead>
                     <tr>

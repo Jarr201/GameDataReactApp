@@ -34,11 +34,22 @@ function App() {
   // }
 
   return (
+    
     <div>
       <Navbar videogames={videogames} setFilteredVideogames={setFilteredVideogames}/>
-      <SalesCharts videogames={videogames}/>
-      <TopFiveChart videogames={videogames}/>
-      <SearchResultsDisplay filteredVideogames={filteredVideogames} />
+        <div className='container-fluid'>
+          <div className='row'>
+            <div className='col-md-6'>
+              <div className='border-box'>
+                <SearchResultsDisplay filteredVideogames={filteredVideogames} />
+              </div>
+            </div>
+            <div className='col-md-6'>
+              <SalesCharts videogames={videogames}/>
+              <TopFiveChart videogames={videogames}/>
+            </div>
+          </div>
+        </div>
       <Footer />
     </div>
   );
