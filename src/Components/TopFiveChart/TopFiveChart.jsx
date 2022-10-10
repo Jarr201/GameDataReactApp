@@ -9,6 +9,7 @@ const options = {
   hAxis: { title: "sales", minValue: 0 },
   vAxis: { title: "gametitle" },
   axes: { y: { 0: { side: "right" } } },
+  colors: ['#33FFBD', '#DBFF33', '#FF5733']
 };
 
 const TopFiveChart = ({ videogames }) => {
@@ -22,13 +23,15 @@ const TopFiveChart = ({ videogames }) => {
     let orderedGames = filteredGames.sort((a, b) => a.game_rank - b.game_rank);
     console.log("Ordered by Rank", orderedGames);
 
-    const data = [
-      ["Game Name", "Japan", "Europe", "North America"],
-
-    ];
+    const data = [["Game Name", "Japan", "Europe", "North America"]];
 
     orderedGames.map((e) => {
-      data.push([e.name, e.japansales * 1000000, e.europesales * 1000000, e.northamericasales*1000000]);
+      data.push([
+        e.name,
+        e.japansales * 1000000,
+        e.europesales * 1000000,
+        e.northamericasales * 1000000,
+      ]);
     });
 
     return data;
