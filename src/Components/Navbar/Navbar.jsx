@@ -9,7 +9,7 @@ import {useState} from "react";
 const Navbar = (props) => {   
     function getSearchedVideoGame(searchterm){
         let response = props.videogames.filter(function(e){
-          if (e.name.includes(searchterm))
+          if (e.name.toLowerCase().includes(searchterm))
           {return true}
           else
           {return false}
