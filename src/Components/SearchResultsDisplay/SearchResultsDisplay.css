@@ -1,3 +1,7 @@
 .form-grid {
     display: grid;
 }
+
+table {
+    background-color: #212529;
+}

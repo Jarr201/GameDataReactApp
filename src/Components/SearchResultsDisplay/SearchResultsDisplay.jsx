@@ -5,11 +5,11 @@ const SearchResultsDisplay = (props) => {
 
     return (
         
-        <div class="table-responsive" className="form-grid">
-            <table className='table table-hover' border='2px' style={{'borderCollapse':'collapse'}}>
+        <div class="table-responsive" className="form-grid" >
+            <table className='table table-hover' border='2px' style={{borderCollapse:'collapse'}} class="text-white bg-dark">
                 <thead>
                     <tr>
-                        <th>NAME</th>
+                        <th style={{color: '#FFBF46'}}>NAME</th>
                         <th>RANK</th>
                         <th>PLATFORM</th>
                         <th>YEAR</th>

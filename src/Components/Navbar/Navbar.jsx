@@ -25,7 +25,9 @@ const Navbar = (props) => {
                     <ul>
                         <li className="brand">
                             <div style={{ textDecoration: "none", color: "white" }}>
-                                <b>Game Data</b>
+                                <b>Games</b>
+                                <b style={{color: "#FFBF46"}}> R </b>
+                                <b>Us</b>
                                 <SearchBar submittedSearchTerm={getSearchedVideoGame} />
                             </div>
                         </li>
