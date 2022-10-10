@@ -6,7 +6,7 @@ import Navbar from './Components/Navbar/Navbar';
 import Footer from './Components/Footer/Footer';
 import SalesCharts from './Components/SalesCharts/SalesCharts';
 import TopFiveChart from './Components/TopFiveChart/TopFiveChart';
-import PlatformChart from './Components/PlatformChart/PlatformChart'
+import GenreChart from './Components/GenreChart/GenreChart'
 
 function App() {
 
@@ -47,8 +47,8 @@ function App() {
             </div>
             <div className='col-md-6' style={{padding: '3em', }}>
               {/* <h1>Analytics</h1> */}
-              <PlatformChart videogames={videogames}/>
               <SalesCharts videogames={videogames}/>
+              <GenreChart videogames={videogames}/>
               <TopFiveChart videogames={videogames}/>
             </div>
           </div>
