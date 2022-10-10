@@ -10,7 +10,15 @@ table {
     height: 40px;
 } */
 
-.overflow-scroll {
-    height: 80em;
+/* .overflow-scroll {
+    height: auto;
     width: 48em;
-}
+    white-space: normal;
+    margin-right: .5em;
+} */
+
+#please-scroll{
+    height: calc(100vh - 110px);
+    overflow-y: scroll;
+    white-space: normal;
+  }

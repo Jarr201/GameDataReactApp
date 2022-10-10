@@ -6,8 +6,8 @@ const SearchResultsDisplay = (props) => {
     return (
         
         <div class="table-responsive" className="form-grid" >
-            <div class="overflow-scroll">
-            <table className='table table-hover' border='2px' style={{borderCollapse:'collapse'}} class="text-white bg-dark" >
+            <div id="please-scroll">
+            <table className='table table-hover table-dark' border='2px' style={{borderCollapse:'collapse'}} class="text-white bg-dark" >
                 <thead>
                     <tr>
                         <th style={{color: '#FFBF46'}}>NAME</th>
