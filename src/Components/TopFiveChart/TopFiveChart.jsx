@@ -9,7 +9,7 @@ const options = {
   hAxis: { title: "sales", minValue: 0 },
   vAxis: { title: "gametitle" },
   axes: { y: { 0: { side: "right" } } },
-  colors: ['#0D6EFD', '#FD7E14', '#DC3545']
+  colors: ['#FFBF46', '#575761', '#648381']
 };
 
 const TopFiveChart = ({ videogames }) => {

@@ -5,3 +5,12 @@
 table {
     background-color: #212529;
 }
+
+/* tbody {
+    height: 40px;
+} */
+
+.overflow-scroll {
+    height: 80em;
+    width: 48em;
+}

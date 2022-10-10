@@ -37,7 +37,9 @@ const PlatformCharts = ({videogames}) => {
 
 const options = {
   title: "Global Sales by Genre",
+  subtitle: "Which Genres are the most popular?",
   is3D: true,
+  colors: ['#11151C', '#212D40', '#364156', '#7D4E57', '#D66853', '#F2542D', '#CA2E55', '#FF715B', '#D0CCD0', '#BF1A2F', '#D5CFE1', '#B8336A']
 };
 
 
