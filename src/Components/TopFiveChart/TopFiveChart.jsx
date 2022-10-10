@@ -2,7 +2,7 @@ import { Chart } from "react-google-charts";
 
 const options = {
   chart: {
-    title: "Regional Sale Performance",
+    title: "Global Top Five and Region with Highest Sales",
     subtitle: "Japan, Europe, North America",
   },
   bars: "horizontal",
@@ -39,7 +39,7 @@ const TopFiveChart = ({ videogames }) => {
 
   return (
     <div class="shadow p-3 mb-5 bg-white rounded">
-      <h1> Global Top Five and Region with Highest Sales </h1>
+      {/* <h1> Global Top Five and Region with Highest Sales </h1> */}
       <Chart
         chartType="Bar"
         width="100%"

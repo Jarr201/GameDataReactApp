@@ -52,6 +52,19 @@ const SalesCharts = ({ videogames }) => {
     console.log("Platform Arrays", platformArrays);
 
     const data = [
+      ["Genre Names", "Global Sales"],
+      [distinctGameNames[0], globalGames[0],],
+      [distinctGameNames[1], globalGames[1],],
+      [distinctGameNames[2], globalGames[2],],
+      [distinctGameNames[3], globalGames[3],],
+      [distinctGameNames[4], globalGames[4],],
+      // [distinctPlatformNames[5], platformSales[5],],
+      // [distinctPlatformNames[6], platformSales[6],],
+      // [distinctPlatformNames[7], platformSales[7],],
+      // [distinctPlatformNames[8], platformSales[8],],
+      // [distinctPlatformNames[9], platformSales[9],],
+      // [distinctPlatformNames[10], platformSales[10],],
+    ]
       // [
       //   "Platform",
       //   "Sales",
@@ -79,27 +92,26 @@ const SalesCharts = ({ videogames }) => {
   }
 
   const options = {
-    title: "Since 2013",
-    width: 600,
-    height: 400,
-    bar: { groupWidth: "95%" },
-    legend: { position: "none" },
+    chart: {
+      title: "Global Sales for Top 5 Game Genres",
+      subtitle: "as of 2016",
+      legend: { position: "none" }
+    },
   };
 
-  return (
-    <div class="shadow p-3 mb-5 bg-white rounded">
-      <h1>Global Sales for Each Platform</h1>
-      <Chart
-        background="transparent"
-        chartType="BarChart"
-        width="100%"
-        height="400px"
-        data={generateDataFormChart()}
-        options={options}
-        legendToggle
-      />
-    </div>
-  );
-};
-
+  return ( 
+        <div class="shadow p-3 mb-5 bg-white rounded">
+          <h1></h1>
+            <Chart
+              // background="transparent"
+              chartType="Bar"
+              width="100%"
+              height="400px"
+              data={generateDataFormChart()}
+              options={options}
+            />
+        </div>
+     );
+}
+ 
 export default SalesCharts;
