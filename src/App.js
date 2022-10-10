@@ -6,7 +6,8 @@ import Navbar from './Components/Navbar/Navbar';
 import Footer from './Components/Footer/Footer';
 import SalesCharts from './Components/SalesCharts/SalesCharts';
 import TopFiveChart from './Components/TopFiveChart/TopFiveChart';
-import GenreChart from './Components/GenreChart/GenreChart'
+import GenreChart from './Components/GenreChart/GenreChart';
+import SalesPerPublisherPerConsole from './Components/SalesPerPublisherPerConsole/SalesPerPublisherPerConsole';
 
 function App() {
 
@@ -50,6 +51,7 @@ function App() {
               <SalesCharts videogames={videogames}/>
               <GenreChart videogames={videogames}/>
               <TopFiveChart videogames={videogames}/>
+              <SalesPerPublisherPerConsole videogames={videogames}/>
             </div>
           </div>
         </div>

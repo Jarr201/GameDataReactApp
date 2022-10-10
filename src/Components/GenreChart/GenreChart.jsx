@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Chart } from "react-google-charts";
 import "./GenreChart.css";
 
-const PlatformCharts = ({videogames}) => {  
+const genreCharts = ({videogames}) => {  
     function generateDataFormChart(){
       console.log(videogames);
       
@@ -54,4 +54,4 @@ const options = {
   );
 }
 
-export default PlatformCharts;
+export default genreCharts;
