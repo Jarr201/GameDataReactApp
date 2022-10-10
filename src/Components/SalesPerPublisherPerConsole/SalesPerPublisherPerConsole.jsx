@@ -3,16 +3,13 @@ import { Chart } from "react-google-charts";
 const options = {
   chart: {
     title: "Publisher Sales by Console ",
-    subtitle: "subtitle",
+    subtitle: "Who sold the most on which consoles?",
   },
   bars: "horizontal",
   hAxis: { title: "sales", minValue: 0 },
   vAxis: { title: "gametitle" },
   axes: { y: { 0: { side: "right" } } },
-  colors: [
-    "#000000",
-    "#FFBF46",
-  ],
+  colors: [ "#FF784F", ],
 };
 
 const salesPerPublisherPerConsole = ({ videogames }) => {
@@ -64,8 +61,8 @@ const salesPerPublisherPerConsole = ({ videogames }) => {
     return data;
   }
   return (
-    <div class="shadow p-3 mb-5 bg-white rounded">
-      <Chart
+    <div>
+      <Chart style={{'margin-top': '20px'}}
         chartType="Bar"
         width="100%"
         height="400px"

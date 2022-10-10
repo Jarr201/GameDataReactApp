@@ -39,7 +39,7 @@ const TopFiveChart = ({ videogames }) => {
   }
 
   return (
-    <div class="shadow p-3 mb-5 bg-white rounded">
+    <div>
       {/* <h1> Global Top Five and Region with Highest Sales </h1> */}
       <Chart
         chartType="Bar"

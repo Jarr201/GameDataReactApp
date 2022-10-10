@@ -44,7 +44,7 @@ const SalesCharts = ({ videogames }) => {
   };
 
   return ( 
-    <Chart class="shadow p-3 mb-5 bg-white rounded" 
+    <Chart 
       chartType="PieChart"
       data={generateDataFormChart()}
       options={options}
