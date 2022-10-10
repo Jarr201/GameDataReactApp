@@ -38,8 +38,9 @@ const SalesCharts = ({ videogames }) => {
   }
 
   const options = {
-    title: "Top Console Global Sales",
+    title: "Top Console Global Sales\nWhich platforms sold the most since 2013?",
     is3D: true,
+    colors: ["#8F8F8F", "#FF331F", "#657ED4", "#3626A7", "#0D0106", "#3D3B30", "#A63446", "#FF3366", "#33261D", "7D1128", "#DBCDC6"]
   };
 
   return ( 

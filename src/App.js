@@ -46,7 +46,7 @@ function App() {
                 <SearchResultsDisplay filteredVideogames={filteredVideogames} />
               </div>
             </div>
-            <div className='col-md-6' style={{padding: '3em', }}>
+            <div className='col-md-6' >
               {/* <h1>Analytics</h1> */}
               <SalesCharts videogames={videogames}/>
               <GenreChart videogames={videogames}/>
