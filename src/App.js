@@ -17,7 +17,7 @@ function App() {
 
   useEffect(() => {
     getAllVideoGames();
-    // getById();
+    getById();
   }, [])
 
   async function getAllVideoGames(){
@@ -29,11 +29,11 @@ function App() {
     }
   }
 
-  // async function getById(){
-  //   let response = await axios.get('http://localhost:8080/getById/125');
-  //   setVideogameId(response.data);
-  //   console.log(response.data);
-  // }
+  async function getById(){
+    let response = await axios.get('http://localhost:8080/getById/125');
+    setVideogameId(response.data);
+    console.log(response.data);
+  }
 
   return (
     

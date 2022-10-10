@@ -3,7 +3,7 @@ import { Chart } from "react-google-charts";
 const options = {
   chart: {
     title: "Publisher Sales by Console ",
-    subtitle: "something subtitle",
+    subtitle: "subtitle",
   },
   bars: "horizontal",
   hAxis: { title: "sales", minValue: 0 },
@@ -23,18 +23,24 @@ const salesPerPublisherPerConsole = ({ videogames }) => {
     console.log("Over Ten Million in Sales", topSellers);
 
     let publishers = topSellers.map((g) => g.publisher);
-    console.log("Publishers", publishers);
+    console.log("Top Publishers", publishers);
 
+    // let allPlatforms = topSellers.filter((platform) => platform.platform);
+    // console.log("All Platforms per Top Publisher", allPlatforms);
+    // let allPlatformsPerPublisherArrays = publishers.map(((platform) => {
+    //   let allPlatforms = topSellers.filter((platform) => platform.platform == platform);
+    // console.log("Platforms Per Publisher", allPlatforms);
+    // }));
     let distinctPublisher = [...new Set(publishers)];
     console.log("Distinct Publishers", distinctPublisher);
 
     let publisherArrays = distinctPublisher.map((publisher) => {
-      let allGamesPerPlatform = videogames.filter(
+      let allGamesPerPublisher = publishers.filter(
         (game) => game.publisher == publisher
       );
-      console.log("All games per Platform", allGamesPerPlatform);
-
-      let sumOfPlatformSales = allGamesPerPlatform
+      console.log("All games per Publisher", allGamesPerPublisher);
+      
+      let sumOfPlatformSales = allGamesPerPublisher
         .map((e) => e.globalsales)
         .reduce((a, b) => a + b, 0);
       console.log("Sum of Platform Sales", sumOfPlatformSales);
