@@ -35,7 +35,7 @@ const salesPerPublisherPerConsole = ({ videogames }) => {
     console.log("Distinct Publishers", distinctPublisher);
 
     let publisherArrays = distinctPublisher.map((publisher) => {
-      let allGamesPerPublisher = publishers.filter(
+      let allGamesPerPublisher = topSellers.filter(
         (game) => game.publisher == publisher
       );
       console.log("All games per Publisher", allGamesPerPublisher);
@@ -45,7 +45,7 @@ const salesPerPublisherPerConsole = ({ videogames }) => {
         .reduce((a, b) => a + b, 0);
       console.log("Sum of Platform Sales", sumOfPlatformSales);
 
-      return [publisher, sumOfPlatformSales];
+      return [publisher, sumOfPlatformSales * 1000000];
     });
     console.log("Publisher arrays", publisherArrays);
 
